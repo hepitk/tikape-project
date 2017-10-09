@@ -339,7 +339,27 @@ CREATE TABLE Vakuutuspaatos (
 
 ## 6. Käyttötapauksia
 
-** TODO lisää kuvaus käyttötapauksista ja niitä varten suunnitelluista tietokantakyselyistä **
+** TODO lisää käyttäjätarinoihin liittyvät tietokantakyselyt **
+
+Ongelmankuvauksen ja käsitteiden perusteella luotiin seuraavat käyttäjätarinat.
+
+* Ylläpitäjä voi luoda uuden vakuutussopimuksen.
+
+* Ylläpitäjä voi luoda uuden asiakkaan.
+
+* Ylläpitäjä voi luoda uuden vakuutuspäätöksen.
+
+* Ylläpitäjä voi etsiä yksittäisen vakuutuksen aiheuttamat tulot.
+
+* Ylläpitäjä voi etsiä maksetut korvaukset vakuutuskohtaisesti. (menot)
+
+* Ylläpitäjä voi tarkistaa voimassaolevat vakuutussopimukset.
+
+* Ylläpitäjä voi tarkistaa vakuutuksiin liittyvien vakuutussopimusten määrän. (kysyntä)
+
+* Ylläpitäjä voi tarkistaa tiettyyn ammattiin liittyvät sairaudet.
+
+* Ylläpitäjä voi tarkistaa tiettyyn sairauteen liittyvät menot.
 
 ## 7. Havaitut ongelmankuvauksesta
 
