@@ -308,8 +308,7 @@ CREATE TABLE Asiakas (
 );
 ```
 
-Vakuutussopimus, joka yhdistää asiakkaaseen liitetyt vakuutukset. Vakuutussopimukselle lasketaan kokonaishinta, jossa huomioidaan asiakkaalla olevat vakuutukset.
-
+Vakuutussopimus, joka yhdistää asiakkaaseen liitetyt vakuutukset. Vakuutussopimukselle lasketaan kokonaishinta, jossa huomioidaan asiakkaalla olevat vakuutukset. Lisäksi sopimuksella on alku- ja loppupäivämäärä POSIX-muodossa.
 
 ```
 CREATE TABLE Vakuutussopimus (
@@ -317,11 +316,13 @@ CREATE TABLE Vakuutussopimus (
     asiakas_id integer,
     tyyppi varchar(50),
     hinta double,
+    alkupvm integer,
+    loppupvm integer
     FOREIGN KEY (asiakas_id) REFERENCES Asiakas (id)
 );
 ```
 
-Vakuutuspäätös joka kerää yhteen asiakkaalle myönnetyt (tai hylätyt) päätökset korvaukshakemuksista.
+Vakuutuspäätös, joka kerää yhteen asiakkaalle myönnetyt (tai hylätyt) päätökset korvaushakemuksista.
 
 Vakuutuspäätökset toimivat myös tietona asiakkaan vakuutushistoriasta.
 
