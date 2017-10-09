@@ -54,8 +54,10 @@ CREATE TABLE Taustatiedot (
 
 CREATE TABLE Vakuutus (
     id integer PRIMARY KEY,
+    taustatieto_id integer,
     tyyppi varchar(50),
-    hinta double
+    hinta double,
+    FOREIGN KEY (taustatieto_id) REFERENCES Taustatieto (id)
 );
 
 CREATE TABLE VakuutussopimusVakuutus (
