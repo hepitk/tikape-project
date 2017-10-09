@@ -45,7 +45,7 @@ CREATE TABLE Sukulainen (
     FOREIGN KEY (taustatieto_id) REFERENCES Taustatieto (id)
 );
 
-CREATE TABLE Taustatiedot (
+CREATE TABLE Taustatieto (
     id integer PRIMARY KEY,
     nimi varchar(200),
     kuvaus varchar(1000),
