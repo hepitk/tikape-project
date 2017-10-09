@@ -339,27 +339,80 @@ CREATE TABLE Vakuutuspaatos (
 
 ## 6. Käyttötapauksia
 
-** TODO lisää käyttäjätarinoihin liittyvät tietokantakyselyt **
-
-Ongelmankuvauksen ja käsitteiden perusteella luotiin seuraavat käyttäjätarinat.
-
-* Ylläpitäjä voi luoda uuden vakuutussopimuksen.
+Ongelmankuvauksen ja käsitteiden perusteella luotiin seuraavat käyttäjätarinat ja niille esimerkkitietokantakyselyt.
 
 * Ylläpitäjä voi luoda uuden asiakkaan.
 
+```
+INSERT INTO Asiakas (nimi, hetu, osoite, tulotaso_id, taustatieto_id)
+	VALUES ('Mikko Mallikas', '010170-123F', 'Mallikatu 1 B 12, 00100 Helsinki', 1, 3)
+);
+```
+
+* Ylläpitäjä voi luoda uuden vakuutussopimuksen.
+
+```
+INSERT INTO Vakuutussopimus (tyyppi, hinta, alkupvm, loppupvm, asiakas_id)
+	VALUES ('peruspaketti', 70.50, 1507579376, NULL, 1)
+
+INSERT INTO VakuutussopimusVakuutus (vakuutus_id, vakuutussopimus_id)
+	VALUES (2, 1), (3, 1), (4, 1)
+```
+
 * Ylläpitäjä voi luoda uuden vakuutuspäätöksen.
+
+```
+INSERT INTO Vakuutuspaatos (paatos, summa, asiakas_id, vakuutus_id)
+	VALUES (true, 368.50, 1, 2)
+```
 
 * Ylläpitäjä voi etsiä yksittäisen vakuutuksen aiheuttamat tulot.
 
+```
+SELECT SUM(hinta) FROM Vakuutus
+	WHERE id = 1
+```
+
 * Ylläpitäjä voi etsiä maksetut korvaukset vakuutuskohtaisesti. (menot)
+
+```
+SELECT SUM(summa) FROM Vakuutuspaatos
+	WHERE vakuutus_id = 1
+```
 
 * Ylläpitäjä voi tarkistaa voimassaolevat vakuutussopimukset.
 
+```
+SELECT * FROM Vakuutussopimus
+	WHERE loppupvm IS null
+```
+
 * Ylläpitäjä voi tarkistaa vakuutuksiin liittyvien vakuutussopimusten määrän. (kysyntä)
+
+```
+SELECT COUNT(*) FROM VakuutussopimusVakuutus
+	WHERE vakuutus_id = 1
+```
 
 * Ylläpitäjä voi tarkistaa tiettyyn ammattiin liittyvät sairaudet.
 
+```
+SELECT Taustatieto.nimi AS sairaus, Taustatieto.riskikerroin AS riskikerroin, Ammatti.nimi AS ammatti
+	FROM Ammatti
+	INNER JOIN YksityisAsiakas ON Ammatti.id = YksityisAsiakas.ammatti_id
+	INNER JOIN Asiakas ON YksityisAsiakas.asiakas_id = Asiakas.id
+	INNER JOIN Taustatieto ON Asiakas.taustatieto_id = Taustatieto.id
+	WHERE Taustatieto.nimi = 'selkäkipu'
+```
+
 * Ylläpitäjä voi tarkistaa tiettyyn sairauteen liittyvät menot.
+
+```
+SELECT SUM(Vakuutuspaatos.summa)
+	FROM Taustatieto
+	INNER JOIN Vakuutus ON Taustatieto.id = Vakuutus.taustatieto_id
+	INNER JOIN Vakuutuspaatos ON Vakuutus.id = Vakuutuspaatos.vakuutus_id
+```
 
 ## 7. Havaitut ongelmankuvauksesta
 
