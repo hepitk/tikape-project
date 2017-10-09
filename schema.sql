@@ -82,6 +82,8 @@ CREATE TABLE Vakuutussopimus (
     asiakas_id integer,
     tyyppi varchar(50),
     hinta double,
+    alkupvm integer,
+    loppupvm integer
     FOREIGN KEY (asiakas_id) REFERENCES Asiakas (id)
 );
 
