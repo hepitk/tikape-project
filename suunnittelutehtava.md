@@ -1,6 +1,10 @@
-# Tietokantojen perusteet, suunnittelutehtävä
+# Tietokantojen perusteet, suunnittelutehtävä: Vakuutusyhtiö VakaVan tietokannan suunnittelu
 
-Otsikkosivu - TODO
+Aki Rehn (xxx)  
+Atte Lainejoki (xxx)  
+Heino Pitkänen (xxx)
+
+\pagebreak
 
 ## 1. Käsiteanalyysin vaiheet
 
@@ -10,7 +14,7 @@ Raportissa kuvataan jokaista vaihetta ainakin pintapuolisesti.
 
 ### 1.1 Käsite-ehdokkaiden tunnistaminen
 
-Ensimmäisessä vaiheessa pyrittiin tunnistamaan ongelmankuvauksesta erilaisia substantiiveja ja ilmoöitä, jotka valittiin käsite-ehdokkaiksi.
+Ensimmäisessä vaiheessa pyrittiin tunnistamaan ongelmankuvauksesta erilaisia substantiiveja ja ilmiöitä, jotka valittiin käsite-ehdokkaiksi.
 
 Ensimmäisessä vaiheessa tunnistettiin seuraavia käsite-ehdokkaita:
 
@@ -65,7 +69,7 @@ Ensimmäisessä vaiheessa tunnistettiin seuraavia käsite-ehdokkaita:
 * ammatti
 * istumatyö
 
-Joista karsiutui huomattava määrä pois. Kahden karsintakierroksen jälkeen jäljelle jäivät seuraava käsite-ehdokkaat:
+Käsitteistä karsiutui huomattava määrä pois. Kahden karsintakierroksen jälkeen jäljelle jäivät seuraavat käsite-ehdokkaat:
 
 * yritysasiakas
 * yksityisasiakas
@@ -276,9 +280,9 @@ Käsiteanalyysin perusteella päädyttiin seuraavanlaiseen kaavioon käsitteist�
 
 Tietokanta on suunniteltu käsiteanalyysin pohjalta.
 
-Käsiteanalyysissa havaituille käsitteille lisättiin löydetyt attribuutit. Esimerkiksi hinta kuvataan Double -tyyppisenä, kun taas nimi Varchar -tyyppisenä.
+Käsiteanalyysissa havaituille käsitteille lisättiin löydetyt attribuutit. Esimerkiksi hinta kuvataan Double-tyyppisenä, kun taas nimi Varchar-tyyppisenä. Vakuutussopimuksen alku ja loppupäivämäärä ovat integerinä, joihin tieto lisätään POSIX-tyyppisenä.
 
-Lisäksi käsiteanalyysissä löydet osallistumisrajoitteet hyödynnettiin ja lisäämällä tietokantatauluille tarvittavat pää- sekä viiteavaimet.
+Lisäksi käsiteanalyysissä löydetyt osallistumisrajoitteet hyödynnettiin ja lisäämällä tietokantatauluille tarvittavat pää- ja viiteavaimet sekä luomalla tarvittavat liitostaulut.
 
 
 ## 4. Tietokantakaavio
