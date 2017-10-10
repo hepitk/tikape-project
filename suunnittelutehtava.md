@@ -272,7 +272,7 @@ Lopulliseksi käsite-listaksi saatiin siis seuraavat käsitteet attribuutteineen
 
 Käsiteanalyysin perusteella päädyttiin seuraavanlaiseen kaavioon käsitteistä ja niiden yhteyksistä.
 
-** TODO kuva käsitekaaviosta **
+![Käsitekaavio](imgs/kasitekaavio.png)
 
 
 ## 3. Tietokannan taulujen kuvaukset
