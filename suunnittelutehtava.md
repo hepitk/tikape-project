@@ -144,13 +144,13 @@ Lisäämällä havaitut osallistumisrajoitteet päädyttiin seuraavanlaiseen kä
 Seuraavassa vaiheessa tekstistä etsittiin attribuutteja löydetyille käsitteille. Tunnistettiin seuraavat attribuutit:
 
 * yritysasiakas
-  * y-tunnus
-  * toimiala
+    * y-tunnus
+    * toimiala
 
 
 * yksityisasiakas
-  * hetu
-  * ammatti
+    * hetu
+    * ammatti
 
 
 * vakuutus
@@ -166,51 +166,51 @@ Seuraavassa vaiheessa tekstistä etsittiin attribuutteja löydetyille käsitteil
 
 
 * vakuutuspäätös
-  * vakuutus
-  * korvaussumma
-  * päätös
+    * vakuutus
+    * korvaussumma
+    * päätös
 
 
 * ammatti
-  * nimi
+    * nimi
 
 
 * taustatieto
-  * kuvaus
-  * riskikerroin
+    * kuvaus
+    * riskikerroin
 
 
 * asuinpaikka
-  * kuvaus
-  * riskikerroin
+    * kuvaus
+    * riskikerroin
 
 
 * tulotaso
-  * taso
+    * taso
 
 
 * harrastus
-  * kuvaus
-  * riskikerroin
+    * kuvaus
+    * riskikerroin
 
 
 * sairaus
-  * kuvaus
-  * riskikerroin
+    * kuvaus
+    * riskikerroin
 
 
 * sukulainen
-  * nimi
-  * sairaudet
+    * nimi
+    * sairaudet
 
 
 * lapsi
-  * nimi
-  * sairaudet
+    * nimi
+    * sairaudet
 
 
 * ammatti
-  * nimi
+    * nimi
 
 
 Attribuuttien lisäämisen jälkeen alkaa käsitekaavio osallistumisrajoitteneen jo muistuttamaan tietokantakaaviota.
