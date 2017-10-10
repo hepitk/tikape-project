@@ -130,7 +130,9 @@ Teksteistä voidaan päätellä seuraavat yhteydet.
 * Vakuutussopimus sisältää monta vakuutusopimusta
 * Vakuutukseen liittyy taustatietoja (riskitekijöitä)
 
-** TODO kuva osallistumisrajoitteista **
+Lisäämällä havaitut osallistumisrajoitteet päädyttiin seuraavanlaiseen käsitekaavioon.
+
+![Käsitekaavio osallistumisrajoitteineen](imgs/kasitekaavio-osallistumisrajoitteet.png)
 
 ### 1.4 Tunnista attribuutit ja lisää ne käsitteille
 
