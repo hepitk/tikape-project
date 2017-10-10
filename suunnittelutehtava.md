@@ -76,7 +76,6 @@ Käsitteistä karsiutui huomattava määrä pois. Kahden karsintakierroksen jäl
 * asiakas
 * vakuutus
 * vakuutussopimus
-* vakuutustyyppi
 * vakuutuspäätös
 * taustatiedot
 * asuinpaikka
