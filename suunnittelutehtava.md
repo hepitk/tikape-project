@@ -1,10 +1,10 @@
 # Tietokantojen perusteet, suunnittelutehtävä: Vakuutusyhtiö VakaVan tietokannan suunnittelu
 
-Aki Rehn (xxx)  
-Atte Lainejoki (xxx)  
+Aki Rehn (xxx)
+Atte Lainejoki (xxx)
 Heino Pitkänen (xxx)
 
-\pagebreak
+<div style="page-break-after: always;"></div><!-- page break -->
 
 ## 1. Käsiteanalyysin vaiheet
 
@@ -35,7 +35,7 @@ Ensimmäisessä vaiheessa tunnistettiin seuraavia käsite-ehdokkaita:
 * yhdistelma
 * asiakas
 * hinnoittelu
-* taustatiedot
+* taustatieto
 * vakuutusäätos
 * asuinpaikka
 * tulotaso
@@ -77,7 +77,7 @@ Käsitteistä karsiutui huomattava määrä pois. Kahden karsintakierroksen jäl
 * vakuutus
 * vakuutussopimus
 * vakuutuspäätös
-* taustatiedot
+* taustatieto
 * asuinpaikka
 * tulotaso
 * harrastus
@@ -118,6 +118,10 @@ Teksteistä voidaan päätellä seuraavat yhteydet.
 * Vakuutuksen hintaan vaikuttavat harrastukset
 * Vakuutuksen hintaan vaikuttaa vakuutusten määrä
 
+Käsiteanalyysin toisessa va heessa päädyttiin seuraavanlaiseen kuvaan käsitteistä ja niiden välisistä yhteyksistä.
+
+![Käsitekaavio](imgs/kasitekaavio.png)
+
 
 ### 1.3 Tunnista ja määrittele osallistumisrajoitteet
 
@@ -134,21 +138,18 @@ Lisäämällä havaitut osallistumisrajoitteet päädyttiin seuraavanlaiseen kä
 
 ![Käsitekaavio osallistumisrajoitteineen](imgs/kasitekaavio-osallistumisrajoitteet.png)
 
+
 ### 1.4 Tunnista attribuutit ja lisää ne käsitteille
 
 Seuraavassa vaiheessa tekstistä etsittiin attribuutteja löydetyille käsitteille. Tunnistettiin seuraavat attribuutit:
 
 * yritysasiakas
-  * nimi
   * y-tunnus
-  * osoite
   * toimiala
 
 
 * yksityisasiakas
-  * nimi
-  * heti
-  * osoite
+  * hetu
   * ammatti
 
 
@@ -174,7 +175,7 @@ Seuraavassa vaiheessa tekstistä etsittiin attribuutteja löydetyille käsitteil
   * nimi
 
 
-* taustatiedot
+* taustatieto
   * kuvaus
   * riskikerroin
 
@@ -211,6 +212,12 @@ Seuraavassa vaiheessa tekstistä etsittiin attribuutteja löydetyille käsitteil
 * ammatti
   * nimi
 
+
+Attribuuttien lisäämisen jälkeen alkaa käsitekaavio osallistumisrajoitteneen jo muistuttamaan tietokantakaaviota.
+
+![Käsitekaavio omistusrajoitteineen ja attribuutteineen](imgs/kasitekaavio-osallistumisrajoitteet-attribuutit.png)
+
+
 #### 1.5 Yleistä ja eriytä käsitteitä
 
 Käsiteanalyysiä tehdessä havaittiin, että muutamat käsitteet ovat toisen käsitteen erikoistapauksia.
@@ -220,80 +227,37 @@ Käsiteanalyysiä tehdessä havaittiin, että muutamat käsitteet ovat toisen k�
 * Asuinpaikka, tulotaso, harrastus ja sairaus ovat taustatietojen erikoistapauksia
 * Vakuutushistoria on käyttännössä vain lista asiakkaaseen liittyviä vakuutuspäätöksiä
 
-Lopulliseksi käsite-listaksi saatiin siis seuraavat käsitteet attribuutteineen:
+Lopulliseksi käsite-listaksi saatiin siis seuraavat käsitteet:
 
 
 * asiakas
-  * nimi
-  * osoite
-
-
 * yritysasiakas
-  * y-tunnus
-  * toimiala
-
-
 * yksityisasiakas
-  * hetu
-  * ammatti
-
-
 * vakuutus
-   * tyyppi
-   * hinta
-
-
 * vakuutussopimus
-   * voimassa
-   * alkamisaika
-   * loppumisaika
-   * kokonaishinta
-
-
 * vakuutuspäätös
-  * vakuutus
-  * korvaussumma
-  * päätös
-
-
 * ammatti
-  * nimi
-
-
-* taustatiedot
-  * kuvaus
-  * riskikerroin
-
-
+* taustatieto
 * sukulainen
-  * nimi
-  * sairaudet
 
 
-## 2. Käsitekaavio
-
-Käsiteanalyysin perusteella päädyttiin seuraavanlaiseen kaavioon käsitteistä ja niiden yhteyksistä.
-
-![Käsitekaavio](imgs/kasitekaavio.png)
-
-
-## 3. Tietokannan taulujen kuvaukset
+## 2. Tietokannan taulujen kuvaukset
 
 Tietokanta on suunniteltu käsiteanalyysin pohjalta.
 
-Käsiteanalyysissa havaituille käsitteille lisättiin löydetyt attribuutit. Esimerkiksi hinta kuvataan Double-tyyppisenä, kun taas nimi Varchar-tyyppisenä. Vakuutussopimuksen alku ja loppupäivämäärä ovat integerinä, joihin tieto lisätään POSIX-tyyppisenä.
+Käsiteanalyysissa havaituille käsitteille lisättiin löydetyt attribuutit. Esimerkiksi hinta kuvataan double -tyyppisenä, merkkijonot string -tyyppisenä, sekä päivämäärät date -tyyppisenä.
 
 Lisäksi käsiteanalyysissä löydetyt osallistumisrajoitteet hyödynnettiin ja lisäämällä tietokantatauluille tarvittavat pää- ja viiteavaimet sekä luomalla tarvittavat liitostaulut.
 
 
-## 4. Tietokantakaavio
+## 3. Tietokantakaavio
 
 Lopputulemana muodostettiin seuraavanlainen tietokantakaavio.
 
 ![Tietokantakaavio](imgs/schema.jpg)
 
 
-## 5. Kolmen tärkemmäin taulun SQL Create Table lauseet
+## 4. Kolmen tärkemmäin taulun SQL Create Table lauseet
 
 Tärkeimmiksi taluluiksi valittiin tietokantamallin tauluista keskeisimpiä tauluja.
 
@@ -343,7 +307,7 @@ CREATE TABLE Vakuutuspaatos (
 
 ```
 
-## 6. Käyttötapauksia
+## 5. Käyttötapauksia
 
 Ongelmankuvauksen ja käsitteiden perusteella luotiin seuraavat käyttäjätarinat ja niille esimerkkitietokantakyselyt.
 
@@ -420,6 +384,12 @@ SELECT SUM(Vakuutuspaatos.summa)
 	INNER JOIN Vakuutuspaatos ON Vakuutus.id = Vakuutuspaatos.vakuutus_id
 ```
 
-## 7. Havaitut ongelmankuvauksesta
+## 6. Ratkaisussa havaitut ongelmat
 
-** TODO lisää havaitut ongelmankuvauksesta
+Ratkaisun loppuvaiheessa, erityisesti asiakkaan kaipaamia käyttötapauksia rakennettaessa huomattiin muutamia mallissa muutamia ongelmia.
+
+* Korvauhakemus tietokantataulu puuttuu, joten mallissa ei ole mahdolisuus tallettaa asiakkaan tekemiä korvauhakemuksia
+* Yllä olevaan liittyen olisi ehkä kuvaavampi nimi Vakuutuspaatos -taululle ollut Korvauspäätös ja näin se loogisesti liittyisi Korvaushakemukseen
+* Mallista ei saada selville asiakkaan toivomaa vakuutustyyppikohtaisia menoja ja tuloja, johtuen siitä että Vakuutussopimus talletetaan vain kokonaishinta alennuksineen. Korjausehdotuksena esitetään MyydytVakuutukset tietokantataulua, jonne lisätään Vakuutussopimuksiin kuuluvat vakuutukset alennettuine hintoineen
+
+

@@ -3,7 +3,6 @@ CREATE TABLE Asiakas (
     tulotaso_id integer,
     taustatieto_id integer,
     nimi varchar(50),
-    hetu varchar(11),
     osoite varchar(200),
     FOREIGN KEY (taustatieto_id) REFERENCES Taustatieto (id),
     FOREIGN KEY (tulotaso_id) REFERENCES Tulotaso (id)
@@ -72,6 +71,7 @@ CREATE TABLE Vakuutuspaatos (
     vakuutus_id integer,
     paatos boolean,
     summa double,
+    paatospvm date,
     FOREIGN KEY (asiakas_id) REFERENCES Asiakas,
     FOREIGN KEY (vakuutus_id) REFERENCES Vakuutus
 );
@@ -79,10 +79,9 @@ CREATE TABLE Vakuutuspaatos (
 CREATE TABLE Vakuutussopimus (
     id integer PRIMARY KEY,
     asiakas_id integer,
-    tyyppi varchar(50),
     hinta double,
-    alkupvm integer,
-    loppupvm integer,
+    alkupvm date,
+    loppupvm date,
     FOREIGN KEY (asiakas_id) REFERENCES Asiakas (id)
 );
 
