@@ -1,10 +1,10 @@
 # Tietokantojen perusteet, suunnittelutehtävä: Vakuutusyhtiö VakaVan tietokannan suunnittelu
 
-Aki Rehn (xxx)
-Atte Lainejoki (xxx)
-Heino Pitkänen (xxx)
+Aki Rehn (xxx) \
+Atte Lainejoki (xxx) \
+Heino Pitkänen (xxx) \
 
-<div style="page-break-after: always;"></div><!-- page break -->
+\pagebreak
 
 ## 1. Käsiteanalyysin vaiheet
 
@@ -120,7 +120,7 @@ Teksteistä voidaan päätellä seuraavat yhteydet.
 
 Käsiteanalyysin toisessa va heessa päädyttiin seuraavanlaiseen kuvaan käsitteistä ja niiden välisistä yhteyksistä.
 
-![Käsitekaavio](imgs/kasitekaavio.png)
+![](imgs/kasitekaavio.png)
 
 
 ### 1.3 Tunnista ja määrittele osallistumisrajoitteet
@@ -136,7 +136,7 @@ Käsiteanalyysin toisessa va heessa päädyttiin seuraavanlaiseen kuvaan käsitt
 
 Lisäämällä havaitut osallistumisrajoitteet päädyttiin seuraavanlaiseen käsitekaavioon.
 
-![Käsitekaavio osallistumisrajoitteineen](imgs/kasitekaavio-osallistumisrajoitteet.png)
+![](imgs/kasitekaavio-osallistumisrajoitteet.png)
 
 
 ### 1.4 Tunnista attribuutit ja lisää ne käsitteille
@@ -215,7 +215,7 @@ Seuraavassa vaiheessa tekstistä etsittiin attribuutteja löydetyille käsitteil
 
 Attribuuttien lisäämisen jälkeen alkaa käsitekaavio osallistumisrajoitteneen jo muistuttamaan tietokantakaaviota.
 
-![Käsitekaavio omistusrajoitteineen ja attribuutteineen](imgs/kasitekaavio-osallistumisrajoitteet-attribuutit.png)
+![](imgs/kasitekaavio-osallistumisrajoitteet-attribuutit.png)
 
 
 #### 1.5 Yleistä ja eriytä käsitteitä
@@ -254,7 +254,7 @@ Lisäksi käsiteanalyysissä löydetyt osallistumisrajoitteet hyödynnettiin ja 
 
 Lopputulemana muodostettiin seuraavanlainen tietokantakaavio.
 
-![Tietokantakaavio](imgs/schema.jpg)
+![](imgs/schema.jpg)
 
 
 ## 4. Kolmen tärkemmäin taulun SQL Create Table lauseet
