@@ -121,7 +121,7 @@ Teksteistä voidaan päätellä seuraavat yhteydet.
 * Asiakkaalla on monta vakuutusopimusta, joista yksi on voimassa
 * Asiakkaalla on taustatietoja
 * Yksityisasiakkaalla on ammatti
-* Ykstyisasiakkaalla on sukulaisia
+* Yksityisasiakkaalla on sukulaisia
 * Vakuutuspäätös liittyy vakuutukseen
 * Vakuutushistoriassa on monta vakuutuspäätöstä
 * Vakuutussopimus sisältää monta vakuutusopimusta
@@ -285,7 +285,8 @@ Lisäksi käsiteanalyysissä löydet osallistumisrajoitteet hyödynnettiin ja li
 
 Lopputulemana muodostettiin seuraavanlainen tietokantakaavio.
 
-** TODO kuva tietokantaschemasta **
+![Tietokantakaavio](imgs/schema.jpg)
+
 
 ## 5. Kolmen tärkemmäin taulun SQL Create Table lauseet
 
