@@ -14,7 +14,6 @@ CREATE TABLE YritysAsiakas (
     ammatti_id integer,
     'y-tunnus' varchar(9),
     'toimiala' varchar(5),
-    FOREIGN KEY (ammatti_id) REFERENCES Ammatti (id),
     FOREIGN KEY (asiakas_id) REFERENCES Asiakas (id)
 );
 
@@ -83,7 +82,7 @@ CREATE TABLE Vakuutussopimus (
     tyyppi varchar(50),
     hinta double,
     alkupvm integer,
-    loppupvm integer
+    loppupvm integer,
     FOREIGN KEY (asiakas_id) REFERENCES Asiakas (id)
 );
 
