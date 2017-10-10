@@ -300,14 +300,12 @@ Asiakas.
 ```
 CREATE TABLE Asiakas (
     id integer PRIMARY KEY,
-    ammatti_id integer,
     tulotaso_id integer,
     taustatieto_id integer,
     nimi varchar(50),
     hetu varchar(11),
     osoite varchar(200),
     FOREIGN KEY (taustatieto_id) REFERENCES Taustatieto (id),
-    FOREIGN KEY (ammatti_id) REFERENCES Ammatti (id),
     FOREIGN KEY (tulotaso_id) REFERENCES Tulotaso (id)
 );
 ```
@@ -333,13 +331,14 @@ Vakuutuspäätökset toimivat myös tietona asiakkaan vakuutushistoriasta.
 ```
 CREATE TABLE Vakuutuspaatos (
     id integer PRIMARY KEY,
+    asiakas_id integer,
     vakuutus_id integer,
-    vakuutushistoria_id integer,
     paatos boolean,
     summa double,
-    FOREIGN KEY (asiakas_id) REFERENCES Asiakas,    
+    FOREIGN KEY (asiakas_id) REFERENCES Asiakas,
     FOREIGN KEY (vakuutus_id) REFERENCES Vakuutus
 );
+
 ```
 
 ## 6. Käyttötapauksia
